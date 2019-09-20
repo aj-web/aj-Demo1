@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="org.lanqiao.mapper.AdminMapper">
+        <!-- <resultMap type="Admin" id="AdminResultMap">
+        	<id property="id" column="aid" />
+        	<result property="apwd" column="apwd" />
+        	<result property="acname" column="acname" />
+        	<result property="atel" column="atel" />
+        	<result property="aemail" column="aemail" />
+        	<result property="aimg" column="aimg" />
+        	<result property="by001" column="by001" />
+        	<result property="by002" column="by002" />
+        	<result property="by003" column="by003" />
+        	<result property="by004" column="by004" />
+        	<result property="creattime" column="creattime" />
+        	<result property="creatuser" column="creatuser" />
+        	<result property="updatetime" column="updatetime" />
+        	<result property="updateuser" column="updateuser" />
+        	<collection property="lp" column="aid" select="org.lanqiao.mapper.PrivMapper.getPrivByAid"></collection>
+        	<collection property="lr" column="aid" select="org.lanqiao.mapper.RoleMapper.searchAdminByAid"></collection>
+        </resultMap> -->
+        <!-- <sql id="adminInfo">acname</sql>   sql语句-->
+        	<select id="selectAdminByAcnameAndApwd" resultType="Admin">
+				select * from tc_admin where acname=#{acname} and apwd=#{apwd}
+        	</select>
+        	
+        </mapper>
+        
+        
